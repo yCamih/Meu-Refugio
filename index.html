@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Refúgio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <h1>Meu Refúgio</h1>
+
+      <button class="menu-btn" id="menuBtn">
+        ☰
+      </button>
+
+      <ul class="menu" id="menu">
+        <li><a href="#diario">Meu Diário</a></li>
+        <li><a href="#evolucao">Evolução</a></li>
+        <li><a href="#frase">Frase do Dia</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-text">
+        <span>Saúde mental e autoconhecimento</span>
+        <h2>Um espaço seguro para acolher o que você sente.</h2>
+        <p>
+          Registre seus sentimentos, acompanhe seu estado emocional e encontre pequenas ferramentas para cuidar de você.
+        </p>
+        <a href="#diario" class="btn">Começar agora</a>
+      </div>
+
+      <div class="hero-card">
+        <p>Como você está se sentindo hoje?</p>
+        <strong id="heroEmotion">Escolha no diário 💜</strong>
+      </div>
+    </section>
+  </header>
+
+  <main>
+
+    <section class="frase-section" id="frase">
+      <h2>Frase do Dia</h2>
+      <p id="fraseDia"></p>
+    </section>
+
+    <section class="diario-section" id="diario">
+      <div class="section-title">
+        <h2>Meu Diário</h2>
+        <p>Antes de escrever, escolha como você está se sentindo.</p>
+      </div>
+
+      <div class="emocoes">
+        <button class="emotion-btn" data-emotion="Feliz">😊 Feliz</button>
+        <button class="emotion-btn" data-emotion="Calmo">🌿 Calmo</button>
+        <button class="emotion-btn" data-emotion="Neutro">😐 Neutro</button>
+        <button class="emotion-btn" data-emotion="Ansioso">😰 Ansioso</button>
+        <button class="emotion-btn" data-emotion="Triste">😢 Triste</button>
+        <button class="emotion-btn" data-emotion="Irritado">😡 Irritado</button>
+      </div>
+
+      <form class="diario-form" id="diarioForm">
+        <label>Emoção selecionada:</label>
+        <input type="text" id="emocaoSelecionada" placeholder="Escolha uma emoção acima" readonly />
+
+        <label>Escreva sobre seu dia:</label>
+        <textarea id="textoDiario" placeholder="Como você está se sentindo? O que aconteceu hoje?"></textarea>
+
+        <button type="submit" class="btn">Salvar registro</button>
+      </form>
+    </section>
+
+    <section class="evolucao-section" id="evolucao">
+      <div class="section-title">
+        <h2>Evolução Emocional</h2>
+        <p>Acompanhe seus registros e perceba seus sentimentos ao longo do tempo.</p>
+      </div>
+
+      <div class="cards">
+        <div class="info-card">
+          <h3>Registros</h3>
+          <p id="totalRegistros">0</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Humor frequente</h3>
+          <p id="humorFrequente">Nenhum</p>
+        </div>
+      </div>
+
+      <div class="grafico-card">
+        <h3>Gráfico semanal</h3>
+        <div class="grafico" id="graficoSemanal"></div>
+      </div>
+
+      <div class="historico">
+        <h3>Histórico de emoções</h3>
+        <div id="listaHistorico"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Meu Refúgio — um espaço para respirar, sentir e recomeçar.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
